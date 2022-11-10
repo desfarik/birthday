@@ -10,7 +10,7 @@
 
     <style>
         body {
-            background: url(./space.jpg);
+            background: url(assets/space.jpg);
             margin: 0;
             min-height: 100vh;
             background-repeat: no-repeat;
@@ -58,7 +58,7 @@
             color: white;
             text-align: center;
             font-size: 0.5rem;
-            margin: 20px;
+            margin: 20px 20px 30px;
         }
 
         .birthdate {
@@ -112,6 +112,8 @@
 
         a {
             color: #ffd800;
+            display: inline-block;
+            margin-top: 15px;
         }
 
         .bullet {
@@ -139,9 +141,9 @@
 <body>
 
 <div class="cat">
-    <img class="cat-body" src="./cat.png" alt="">
-    <img class="vr" src="./vr.png" alt="">
-    <img class="ak-47" src="./ak-47.png" alt="">
+    <img class="cat-body" src="assets/cat.png" alt="">
+    <img class="vr" src="assets/vr.png" alt="">
+    <img class="ak-47" src="assets/ak-47.png" alt="">
 </div>
 
 <h1>
@@ -156,8 +158,12 @@
     <span class="time">в 14:45</span>
     <br>
     <span>в
-        <a href="https://teleport.by/">ПАРК TELEPORT VR</a>
+        <a href="https://teleport.by/" target="_blank">ПАРК TELEPORT VR</a>
     </span>
+    <br>
+    ул. Притыцкого, 156.
+    <br>
+    ТРЦ GREEN CITY
     <br>
 </h1>
 
@@ -175,9 +181,9 @@
         bullet.style.left = rect.right + 'px';
         bullet.style.top = rect.bottom + 'px';
         bullet.style.transform = `rotate(${degree + 10}deg)`;
-        bullet.style.background = "#" + ((1<<24)*Math.random() | 0).toString(16);
+        bullet.style.background = '#' + ((1 << 24) * Math.random() | 0).toString(16);
         bulletArea.appendChild(bullet);
-        setTimeout(() => bullet.remove(), 1000);
+        setTimeout(() => bullet.remove(), 2000);
     }, 37)
 
 </script>
